@@ -59,7 +59,8 @@ def get_poetic_response(client, user_question):
                     "content": user_question,
                 }
             ],
-            model="llama3-70b-8192",
+            # --- MODEL UPDATED HERE ---
+            model="llama-3.3-70b-versatile",
             temperature=0.7,
             max_tokens=1024,
             top_p=1,
@@ -97,7 +98,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown(
     "**About this App:**\n"
     "This chatbot, Kelly, provides a skeptical and poetic take on AI topics. "
-    "It uses the Groq API with the Llama 3 model to generate responses."
+    "It uses the Groq API to generate responses."
 )
 st.sidebar.markdown(
     "To get a Groq API key, visit [GroqCloud](https://console.groq.com/keys)."
